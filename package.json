@@ -1,13 +1,15 @@
 {
   "name": "migration-rehearsal-runner",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Run migrations against representative fixtures before release.",
   "type": "module",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test"
+    "lint": "node --check bin/migration-rehearsal-runner.mjs && node --check src/index.mjs",
+    "test": "node --test",
+    "check": "npm run lint && npm test"
   },
   "license": "MIT",
   "repository": {
