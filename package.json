@@ -1,0 +1,19 @@
+{
+  "name": "migration-rehearsal-runner",
+  "version": "1.0.0",
+  "description": "Run migrations against representative fixtures before release.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "lint": "node --check bin/migration-rehearsal-runner.mjs && node --check src/index.mjs",
+    "test": "node --test",
+    "check": "npm run lint && npm test"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edilec/migration-rehearsal-runner"
+  }
+}
